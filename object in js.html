@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in javascript</title>
+</head>
+<body>
+    <h1>Object in javascript</h1>
+
+    <script>
+        let name = "Anmol Kumar"
+        let age = 21;
+
+        let obj = {         //it will automatically detect that obj[name] = "Anmol Kumar"
+            name,           //and obj[age] = 21;
+            age
+        };
+
+        // for(key in obj){
+        //     console.log(key + " = "  + obj[key]);
+        // }
+
+        // =====================================================================
+
+        name = "Anmol Kumar Shrivastav"
+        age = 21;
+
+        let obj1 = {         //Another way of doing it
+            name: name,      //name: "Anmol Kumar", 
+            age: age         //age: 21
+        };
+
+        // for(key in obj1){
+        //     console.log(key + " = "  + obj1[key]);
+        // }
+        
+
+
+
+        let student = {
+            name: name,
+            age: age,
+            display : function(){
+                console.log(`Student Name = ${this.name}`);
+                console.log(this.age);
+            }
+        };
+
+       
+        let student1 = student;
+        name = "Rohit";
+        age = "22";
+
+        let student2 = student;
+        name = "Umang";
+        age = "25";
+
+        let student3 = student;
+
+
+        // student.display();    //all will print same value
+        // student1.display();
+        // student2.display();
+        // student3.display();
+
+
+        //how to make a variable an object
+
+        function child(name, age){
+            return {name, age};         // it will make an object and will return it;
+        }
+
+        child1 = child("Anmol", "B.Tech");
+        child2 = child("Rohit", "B.Tech");
+
+        print(child1);
+        print(child2);
+
+        function print(obj){
+            console.log("Student Name = " + obj.name);
+            console.log("Student Age = " + obj.age);
+        }
+
+        
+    </script>
+</body>
+</html>

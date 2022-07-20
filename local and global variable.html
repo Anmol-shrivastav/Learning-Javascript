@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local and global variable</title>
+</head>
+<body>
+    <h1>Local and global variable</h1>
+
+    <script>
+        var a = 10;
+        function fun(){
+            var b = 200;      // local variable
+            console.log(a);
+            console.log(b);
+        }
+
+        console.log(a);
+        // console.log(b); // this will generate an error that b is not defined
+
+        fun();
+    </script>
+</body>
+</html>

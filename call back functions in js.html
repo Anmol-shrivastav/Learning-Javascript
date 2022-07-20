@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call back functions in js</title>
+</head>
+<body>
+    <script>
+        setTimeout(function name(){
+            console.log("Hii am after 5 sec");
+        }, 5000);
+
+        function a(b){
+            console.log("Hello i am a");
+            b();
+        }
+
+        a(function b(){
+            console.log("Hello i am b");
+        });
+    </script>
+</body>
+</html>

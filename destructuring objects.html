@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Object</title>
+</head>
+<body>
+    <h1>Destructuring Objects</h1>
+    
+    <script>
+        let obj = {
+            name: "Anmol Kumar",
+            age: 21
+        };
+
+        let{name, age} = obj;       //name must be same here 
+
+        let{name: studentName, age: studentAge} = obj;
+        console.log(studentName + " " + studentAge);
+
+        console.log(name + " " + age);
+    </script>
+</body>
+</html>

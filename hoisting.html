@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+<body>
+    
+
+    <script>
+        fun();   // Here we have used fun() before its decleration with the help of hoisting
+        console.log(a);
+        var a  = 20;
+        function fun(){
+            console.log("Hello its Anmol Kumar");
+            console.log(a);
+        }
+
+        fun1();   // We do not use hoisting with arrow function it treats fun1() like a variable
+        var fun1 = () =>{
+            console.log("I am a arrow function");
+        }
+
+        
+       
+    </script>
+</body>
+</html>

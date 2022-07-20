@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise.all</title>
+</head>
+<body>
+    <h1>promise.all</h1>
+
+    <script>
+        let print = console.log.bind(console);
+
+       let p = 35;
+       let prom1 = new Promise((res, rej)=>{
+            res("I am done");
+       });
+
+       let prom2 = new Promise((resolve, reject)=>{
+           reject("promise 2 is rejected");
+       })
+
+       let allPromise = Promise.all([p, prom1, prom2]);
+
+       allPromise.then((data)=>{
+            print(data);
+       }).catch((data)=>{
+            print(data);
+       })
+
+       setTimeout(() => {
+           print(allPromise);
+       }, 1000);
+    </script>
+</body>
+</html>

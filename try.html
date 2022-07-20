@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try</title>
+</head>
+<body>
+    <h1>Learning</h1>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    <script>
+    //    var ary = [1,6,6,2,0,6,9,1,7,332,3,1,6];
+       
+    //    function mergeTwoSortedArray(a, b){
+    //         if(a.length == 0) return b;
+    //         if(b.length == 0) return a;
+
+    //         var ans = [];
+    //         var i = 0, j = 0, p = 0;
+    //         while(i < a.length && j < b.length){
+    //             if(a[i] < b[j]){
+    //                 ans[p] = a[i];
+    //                 i++;
+    //             }else{
+    //                 ans[p] = b[j];
+    //                 j++;
+    //             }
+    //             p++;
+    //         }
+
+    //         while(i < a.length){
+    //             ans[p] = a[i];
+    //             p++;
+    //             i++;
+    //         }
+
+    //         while(j < b.length){
+    //             ans[p] = b[j];
+    //             p++;
+    //             j++;
+    //         }
+
+    //         return ans;
+    //    }
+
+    //    function mergeSort(i, j, ary){
+    //         if(i === j){
+    //             var base = new Array(1);
+    //             base[0] = ary[i];
+    //             return base;
+    //         }
+
+    //         let mid = (i + j) / 2;
+
+    //         firstHalf = mergeSort(i, mid, ary);
+    //         secondFalf = mergeSort(mid+1, ary.length-1);
+
+    //         return mergeTwoSortedArray(firstHalf, secondFalf);
+    //    }
+
+       
+    //    console.log(ary.length-1);
+
+    //    console.log(mergeSort(0, ary.length-1, ary));
+
+    var ary = [3,[2,1,[5,2],2],7];
+    var ans = [];
+    function fun(ary, idx){
+        if(idx == ary.length) return;
+
+        if(typeof(ary[idx]) === "object"){
+            fun(ary[idx], 0);
+        }else{
+            ans.push(ary[idx]);
+        }
+
+        fun(ary, idx + 1);
+    }
+
+    fun(ary, 0);
+
+    console.log(ans);
+
+    </script>
+</body>
+</html>
+
+

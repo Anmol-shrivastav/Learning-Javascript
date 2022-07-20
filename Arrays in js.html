@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+        var ary = ["Anmol", 21];
+        function print(ary, str){
+            for(var i=0; i<ary.length; i++){
+                console.log(ary[i]);
+            }
+
+            for(var i=0; i<str.length; i++){
+                if(str[i] == 'A'){
+                    str[i] = "R";
+                }
+                console.log(str[i] instanceof Array);
+                console.log(str[i]);
+            }
+        }
+        print(ary, "Anmol Kumar");
+    </script>
+</body>
+</html>

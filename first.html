@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+</head>
+<body>
+
+
+    
+    <script type="text/javascript">
+
+        class employee{
+            constructor(name){
+                this.name = name;
+                console.log("Parent constructor");
+            }
+        }
+        class manager extends employee{
+            constructor(name){
+                console.log("Child constructor");
+                super("Anmol");
+                this.name = name;
+            }
+        }
+
+        function main(){
+            let emp = new manager("Rohit");
+            console.log(emp.name);
+            console.log(emp.name);
+        }
+        main();
+
+    </script>
+
+</body>
+</html>
